@@ -1,7 +1,6 @@
 # Boilerplate
 
-*Author*
-> Samuel
+> Author: Samuel
 
 <p>Hello,</p>
 <p>This is my sample boilerplate in reactjs. This is still on <b>development mode</b>.</p>
