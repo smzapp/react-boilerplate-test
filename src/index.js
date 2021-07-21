@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
-import store from './slices/store'
+import store from './stores/store';
 
 import 'jquery';
 import 'popper.js';
