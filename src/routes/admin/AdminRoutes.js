@@ -12,6 +12,16 @@ const routes = [
     path: '/dashboard',
     title: 'Dashboard',
     icon: 'fa fa-dashboard',
+  },
+  {
+    path: '/posts',
+    title: 'Posts',
+    children: [
+      {
+        path: '/create',
+        title: 'Create Post'
+      }
+    ]
   }
 ]
 
