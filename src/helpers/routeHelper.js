@@ -1,11 +1,11 @@
 /**
  * @param string, object
  */
-const configureChildren = (base, route) => {
+const configureChildren = (route) => {
   const { children } = route;
   const subMenu = children.map(child => {
     const {path} = child;
-    return {...child, path: `${base}${route.path}${path}` }
+    return {...child, path: `${route.path}${path}` }
   });
 
   return {
@@ -18,18 +18,20 @@ const configureChildren = (base, route) => {
  * @param string, object
  */
 const configureAdminRoute = ({ base, routes}) => {
-  return routes.map((route) => {
+  const result = routes.map((route) => {
     const { path } = route;
     const { children } = route;
+    let parentRoute = {
+      ...route,
+      path: `${base}${path}`
+    };
     if (typeof children != 'undefined') {
-      return configureChildren(base, route);
-    } else {
-      return {
-        ...route,
-        path: `${base}${path}`
-      };
+      return configureChildren(parentRoute);
     }
+    return parentRoute;
   });
+ 
+  return result;
 }
 
 export {
