@@ -1,6 +1,13 @@
+import React from "react"
 
 const configureAdminRoute = ({ base, routes}) => {
-  return base;
+  return routes.map((route, index) => {
+    const { path } = route;
+    return {
+      ...route,
+      path: `${base}${path}`
+    };
+  });
 }
 
 export {

@@ -20,4 +20,6 @@ const AdminRoutes = configureAdminRoute({
   routes: routes
 });
 
+console.log(AdminRoutes);
+
 export default AdminRoutes;
