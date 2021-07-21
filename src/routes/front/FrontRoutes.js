@@ -6,6 +6,10 @@ const FrontRoutes = [
     path: '/',
     title: 'Home',
   },
+  {
+    path: '/about-us',
+    title: 'About us'
+  }
 ]
 
 export default FrontRoutes;
