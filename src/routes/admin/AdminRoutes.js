@@ -1,4 +1,5 @@
 import { configureAdminRoute } from "../../helpers/routeHelper";
+import userRoutes from "./userRoutes";
 
 const base = '/admin-control';
 
@@ -22,14 +23,13 @@ const routes = [
         title: 'Create Post'
       }
     ]
-  }
+  },
+  userRoutes,
 ]
 
 const AdminRoutes = configureAdminRoute({
   base: base,
   routes: routes
 });
-
-console.log(AdminRoutes);
 
 export default AdminRoutes;

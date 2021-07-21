@@ -1,11 +1,13 @@
 
-export default userRoutes = {
+const userRoutes = {
   path: '/users',
   title: 'Users',
   children: [
     {
-      path: '/users/create',
+      path: '/create',
       title: 'Add User'
     }
   ]
 }
+
+export default userRoutes;
